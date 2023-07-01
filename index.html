@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+   <meta charset='UTF-8'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <link rel="stylesheet" type="text/css" href="./style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <title></title>
+</head>
+<body>
+  
+  <!-- all blobs (gradients) with position absolute  -->
+  <img src ="./static/Ellipse 2.png" alt="ellipse1" id="blob-1">
+  <div class="blob2"></div>
+  
+  <!-- <img src ="./static/Ellipse 1.png" alt="floor" id="floor-grad"> -->
+
+
+
+  <!-- landing section  -->
+  <section class="landing-sec">
+    <!-- navbar  -->
+    <nav>
+      <a href="#"><button> About </button></a>
+      <a href="#"><button> Services </button></a>
+      <a href="#"><button> Contact </button></a>
+    </nav>
+
+    <!-- landing text  -->
+    <div class="heading">
+      <h1> <span> LEAP  </span> MEDIA</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    
+    <!-- social media button container  -->
+    <div class="social-med-btn-container">
+      <button></button>
+      <button></button>
+    </div>
+
+    <!-- bottom images  -->
+    <img src="./static/Mask group.png" alt="floor" id="floor">
+    <img src="./static/Group 14.png" alt="left-img" id="land-left">
+    <img src="./static/Group 13.png" alt="left-img" id="land-right">
+    <div class="floor-grad"></div>
+  </section>
+
+
+
+
+  <section class="about-sec"> 
+    <div class="text-container">
+      <h1> <span> ABOUT  </span> US</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>      
+    </div>
+    <div class="img-container" id="eth-img-cont">
+      <img src="./static/eth-left.svg" alt="eth-left" id="eth-left" data-depth="0.7">
+      <!-- <img src="./static/eth.svg" alt="eth" id="eth"> -->
+      <img src="./static/eth-rihgt.svg" alt="eth-rihgt" id="eth-right" data-depth="-0.7">
+    </div>
+    
+
+
+  </section>
+
+
+
+  <script src="./script.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" ></script>
+  
+  <!-- parallax script  -->
+  <!-- <script>
+    var scene = document.querySelector("#eth-img-cont")
+    console.log(scene)
+    var parallax = new Parallax(scene)
+  </script> -->
+</body>
+</html>

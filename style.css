@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin:  0;
+  padding: 0;
+  box-sizing:  border-box;
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1rem;
+}
+body{
+  max-width: 100vw;
+  background-color: #0B1B31;
+  overflow-x: hidden;
+}
+
+
+
+
+.landing-sec{
+  height: 100vh !important;
+  width: 100vw;
+  padding: 4vh 0 0  0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#blob-1{
+  max-width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#floor-grad{
+  width: 100vw;
+  position: absolute;;
+}
+nav{
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  padding: 1vh 0;
+  align-items: center;
+  justify-content: center;
+}
+.landing-sec button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin: 0 5vw;
+  font-size: 1.3rem;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+}
+.heading{
+  width: fit-content;
+  height: min-content;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+a, button{cursor: pointer;}
+nav button:hover{border-bottom: 2px solid white;}
+h1{font-size: 6rem; margin-bottom: 2vh; width: 100%; flex-wrap: nowrap; width: max-content;}
+.heading p{font-size: 1.5rem; line-height: 3rem; margin-top: 20px; max-width: 50%;}
+span{
+  font-size: inherit;
+  background: -webkit-linear-gradient(0deg, #B63FF0, #11E0E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#floor{
+  width: 100vw;
+  justify-self: flex-end;
+}
+.floor-grad{
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  height: 30vh;
+  border-radius: 50%;
+  background-color: rgba(17, 224, 224, 0.4);
+  z-index: -1;
+  filter: blur(800px);
+  -webkit-filter: blur(800px);
+}
+#land-left{position: absolute; bottom: 2vh; width: 50vw; left: 0;}
+#land-right{position: absolute; bottom: 2vh; width: 35vw; right: 0;}
+.social-med-btn-container{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  row-gap: 4vh;
+}
+.social-med-btn-container button{
+  aspect-ratio: 1/1;
+  width: 5vw;
+  background: url('./static/Polygon\ 1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex; justify-content: center; align-items: center;
+}
+
+
+
+
+
+.about-sec{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 2vw;
+  overflow: hidden;
+  padding: 0 5vw;
+}
+.about-sec .text-container{ width: 40vw; }
+.about-sec .text-container h1{font-size: 5rem; margin-bottom: 2vh;}
+.about-sec .text-container p{font-size: 1.5rem; line-height: 3rem; margin-top: 20px;}
+.about-sec span{ 
+  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes oscillation {
+  0% {background-position-y: 0;}
+  50%{background-position-y: 15px;}
+  100%{background-position-y: 0;}
+  /* 25% {background-position-y: 15px;}
+  50% {background-position-y: -10px;}
+  100% {background-position-y: 0;} */
+}
+
+.about-sec .img-container{
+  height: 65vh;
+  background: url('./static/eth.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  column-gap: 3vw;
+  animation-name:  oscillation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
+
+}
+#eth-right{
+  z-index: -5; 
+  position: relative;
+  /* left: 50px;  */
+}
+#eth-left{ position: relative; }
+.blob2{
+  width: 30vw;
+  position: absolute;
+  top: 170vh;
+  bottom: 0;
+  height: 40vh;
+  border-radius: 50%;
+  background-color: #7461C0;
+  z-index: -1;
+  filter: blur(800px);
+  -webkit-filter: blur(800px);
+}
+
+
+
+
+
+
+
+/* responsiveness  */
+@media screen and (max-width: 800px) {
+  nav button{font-size: 0.1rem;}
+  .heading h1, .about-sec .text-container h1{font-size: 2.5rem;}
+  .heading p, .about-sec .text-container p{font-size: 1rem; line-height: 1.5rem;}
+  .floor-grad{height: 20vh;}
+}
