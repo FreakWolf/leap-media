@@ -12,8 +12,3 @@ window.addEventListener("scroll", (e)=>{
   tape1.style.marginLeft = -1*(window.scrollY - 2*window.innerHeight)*50/window.innerHeight + "vw";
   tape2.style.marginLeft = 1*(window.scrollY - 2*window.innerHeight)*50/window.innerHeight + "vw";
 })
-
-
-
-
-

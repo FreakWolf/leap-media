@@ -13,8 +13,10 @@ body{
   overflow-x: hidden;
 }
 
-
-
+::selection{
+  background-color: #33cf96;
+  color: white;
+}
 
 .landing-sec{
   height: 100vh !important;
