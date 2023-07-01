@@ -184,6 +184,66 @@ span{
 
 
 
+.partner-tape{
+  position: relative;
+  border-radius: 10px;
+  aspect-ratio: 1664/250;
+  width: 100vw;
+  background-image: url('./static/tape.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2%;
+  padding: 2.5% 5%;
+  margin-bottom: 9vh;
+}
+.partner-tape .card{
+  background-color: #0B1B31;
+  height: 100%;
+  display: flex;
+  justify-content: center; align-items: center;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+.partner-tape .card img{
+  width: 50%;
+  height: auto;
+}
+#tape1{margin-left: 75vw;}
+#tape2{margin-left: -75vw;}
+
+
+#globe-img{
+  position: relative;
+  transform: translate(-10%, -22%);
+}
+.blob3{
+  width: 30vw;
+  height: 200vh;
+  position: absolute;
+  top: 280vh;
+  right: -20vw;
+  border-radius: 50%;
+  background-color: #7cf6da77;
+  filter: blur(800px);
+  -webkit-filter: blur(800px);
+}
+
+
+
+
+.services-section{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+}
+
+
+
 
 
 /* responsiveness  */
