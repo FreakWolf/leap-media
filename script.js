@@ -7,8 +7,8 @@ const tape2 = document.querySelector("#tape2");
 
 
 window.addEventListener("scroll", (e)=>{
-  landingLeftImg.style.left = -1 *window.scrollY*25/window.innerHeight +'vw';
-  landingRightImg.style.right = -1 *window.scrollY*17/window.innerHeight +'vw';
+  // landingLeftImg.style.left = -1 *window.scrollY*25/window.innerHeight +'vw';
+  // landingRightImg.style.right = -1 *window.scrollY*17/window.innerHeight +'vw';
   tape1.style.marginLeft = -1*(window.scrollY - 2*window.innerHeight)*50/window.innerHeight + "vw";
   tape2.style.marginLeft = 1*(window.scrollY - 2*window.innerHeight)*50/window.innerHeight + "vw";
 })

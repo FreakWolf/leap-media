@@ -5,7 +5,7 @@
    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
    <link rel="stylesheet" type="text/css" href="./style.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <title></title>
+   <title>Leap Media</title>
 </head>
 <body>
   
@@ -13,7 +13,6 @@
   <img src ="./static/Ellipse 2.svg" alt="ellipse2" id="blob-1">
   <div class="blob2"></div>
   <div class="blob3"></div>
-  
   <!-- <img src ="./static/Ellipse 1.svg" alt="floor" id="floor-grad"> -->
 
 
@@ -22,9 +21,9 @@
   <section class="landing-sec">
     <!-- navbar  -->
     <nav>
-      <a href="#"><button> About </button></a>
-      <a href="#"><button> Services </button></a>
-      <a href="#"><button> Contact </button></a>
+      <a href="#about"><button> About </button></a>
+      <a href="#services"><button> Services </button></a>
+      <a href="#contact"><button> Contact </button></a>
     </nav>
 
     <!-- landing text  -->
@@ -49,40 +48,46 @@
 
 
   <!-- about us section  -->
-  <section class="about-sec"> 
+  <section class="about-sec" id="about"> 
     <div class="text-container">
       <h1> <span> ABOUT  </span> US</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>      
     </div>
     <div class="img-container" id="eth-img-cont">
       <img src="./static/eth-left.svg" alt="eth-left" id="eth-left" data-depth="0.7">
-      <!-- <img src="./static/eth.svg" alt="eth" id="eth"> -->
+      <img src="./static/eth.svg" alt="eth" id="eth">
       <img src="./static/eth-rihgt.svg" alt="eth-rihgt" id="eth-right" data-depth="-0.7">
     </div>
   </section>
 
 
   <!-- partners tape  -->
-  <div class="partner-tape" id="tape1">
-    <div class="card"> <img src="./static/partnerlogo.svg"> </div>
-    <div class="card"> <img src="./static/partnerlogo.svg"> </div>
-    <div class="card"> <img src="./static/partnerlogo.svg"> </div>
-    <div class="card"> <img src="./static/partnerlogo.svg"> </div>
-  </div>
-  <div class="partner-tape" id="tape2">
-    <div class="card"> <img src="./static/partnerlogo.svg"> </div>
-    <div class="card"> <img src="./static/partnerlogo.svg"> </div>
-    <div class="card"> <img src="./static/partnerlogo.svg"> </div>
-    <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+  <div class="partner-tapes">
+    <div class="partner-tape" id="tape1">
+      <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+      <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+      <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+      <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+    </div>
+    <div class="partner-tape" id="tape2">
+      <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+      <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+      <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+      <div class="card"> <img src="./static/partnerlogo.svg"> </div>
+    </div>
   </div>
   
 
-  <img src="./static/globe.svg" alt="globe" id="globe-img">
+  <!-- <img src="./static/globe.svg" alt="globe" id="globe-img"> -->
 
 
   
 
-  <section class="services-section">
+  <section class="services-section" id="services">
+
+  </section>
+
+  <section class="contact-section" id="contact">
 
   </section>
 
@@ -90,7 +95,7 @@
 
 
   <script src="./script.js"></script>
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" ></script>
+  <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" ></script> -->
   
   <!-- parallax script  -->
   <!-- <script>
