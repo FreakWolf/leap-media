@@ -252,6 +252,20 @@ span{
   -webkit-filter: blur(800px);
 }
 
+.partner-tapes h1, .contact-heading{
+  font-size: 3.5rem;
+  margin: 20vh auto 2vh;
+  max-width: 80vw;
+  text-align: center;
+  line-height: 1;
+}
+
+.partner-tapes span, .contact-heading span{
+  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .partner-tape{
   position: relative;
   border-radius: 10px;
@@ -266,6 +280,8 @@ span{
   align-items: center;
   column-gap: 2%;
   padding: 2.5% 5%;
+  margin-top: 9vh;
+  margin-bottom: 9vh;
 }
 
 .partner-tape .card{
@@ -285,7 +301,6 @@ span{
 
 #tape1{
   margin-left: 75vw;
-  margin-bottom: 9vh;
 }
 
 #tape2{
@@ -314,7 +329,7 @@ span{
 }
 
 .services-sec{
-  height: 300vh;
+  height: 600vh;
   width: 100vw;
   display: flex;
   position: relative;
@@ -329,7 +344,7 @@ span{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 10vw;
+  margin: 0 7vw 0 8vw;
 }
 
 .mobile_view_services_img{
@@ -337,7 +352,9 @@ span{
 }
 
 .service-text-container h1{
-  font-size: 5rem;
+  max-width: 100%;
+  font-size: 4rem;
+  line-height: 1;
   margin-bottom: 2vh;
 }
 
@@ -348,7 +365,7 @@ span{
 }
 
 .service-text-container span{ 
-  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437); 
+  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -356,13 +373,20 @@ span{
 .services-img-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 40vw;
   height: 100vh;
   position: sticky;
   top: 0px;
-  right: 0px;
+  right: 5vw;
 }
 
-#frame_top_img {
+#frame_inside_img {
+  width: 100%;
+  max-height: 90%;
+}
+
+/* #frame_top_img {
   width: 15vw;
   z-index: 10;
   position: absolute;
@@ -402,12 +426,76 @@ span{
   position: absolute;
   bottom: 0;
   right: 0;
-}
+} */
 
 .contact-sec {
   height: auto;
   width: 100vw;
 }
+
+.floating-telegram-icon {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+}
+
+.floating-meet-btn {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  z-index: 1000;
+  width: max-content;
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+}
+
+.floating-meet-btn a button {
+  background: #24C7D4;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  color: #0B1B31;
+  font-weight: 700;
+}
+
+/* Cursor */
+/* .cursor-wrap {
+  pointer-events: none;
+}
+
+::-moz-selection {
+  color: black;
+  background: yellow;
+}
+
+::selection {
+  color: black;
+  background: yellow;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+.cursor-wrap {
+  z-index: 1000;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
+  mix-blend-mode: difference;
+} */
 
 /* Responsiveness  */
 
@@ -463,6 +551,10 @@ span{
     top: 35%;
   }
 
+  .partner-tapes h1, .contact-heading {
+    font-size: 2.7rem;
+  }
+
   .services-img-container {
     display: none;
   }
@@ -471,9 +563,10 @@ span{
     width: 80vw;
     height: 100vh;
     align-items: center;
+    margin: 0 10vw;
   }
 
-  .service-text-container p{
+  .service-text-container h1, .service-text-container p{
     text-align: center;
   }
 
@@ -507,6 +600,10 @@ span{
   .social-med-btn-container {
     top: 40%;
   }
+
+  .partner-tapes h1, .contact-heading{
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -521,5 +618,171 @@ span{
   .service-text-container p{
     font-size: 1rem;
     line-height: 2rem;
+  }
+
+  .partner-tapes h1, .contact-heading{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .service-text-container h1{
+    font-size: 2.5rem;
+  }
+}
+
+/* Tool-tip Styles */
+
+[data-tooltip] {
+  --arrow-size: 5px;
+}
+
+/* Positioning and visibility settings of the tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  bottom: calc(100% + var(--arrow-size));
+  pointer-events: none;
+  transition: 0.2s;
+  will-change: transform;
+}
+
+/* The actual tooltip with a dynamic width */
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  padding: 10px 18px;
+  min-width: 50px;
+  max-width: 300px;
+  width: max-content;
+  width: -moz-max-content;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: rgba(59, 72, 80, 0.9);
+  background-image: linear-gradient(30deg,
+    rgba(59, 72, 80, 0.44),
+    rgba(59, 68, 75, 0.44),
+    rgba(60, 82, 88, 0.44));
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  white-space: pre-wrap;
+  transform: translate(-50%,  calc(0px - var(--arrow-size))) scale(0.5);
+}
+
+/* Tooltip arrow */
+[data-tooltip]:after {
+  content: '';
+  border-style: solid;
+  border-width: var(--arrow-size) var(--arrow-size) 0px var(--arrow-size); /* CSS triangle */
+  border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
+  transition-duration: 0s; /* If the mouse leaves the element, 
+                              the transition effects for the 
+                              tooltip arrow are "turned off" */
+  transform-origin: top;   /* Orientation setting for the
+                              slide-down effect */
+  transform: translateX(-50%) scaleY(0);
+}
+
+/* Tooltip becomes visible at hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+/* Scales from 0.5 to 1 -> grow effect */
+[data-tooltip]:hover:before {
+  transition-delay: 0.3s;
+  transform: translate(-50%, calc(0px - var(--arrow-size))) scale(1);
+}
+/* 
+  Arrow slide down effect only on mouseenter (NOT on mouseleave)
+*/
+[data-tooltip]:hover:after {
+  transition-delay: 0.5s; /* Starting after the grow effect */
+  transition-duration: 0.2s;
+  transform: translateX(-50%) scaleY(1);
+}
+/*
+  That's it for the basic tooltip.
+
+  If you want some adjustability
+  here are some orientation settings you can use:
+*/
+
+/* LEFT */
+/* Tooltip + arrow */
+[data-tooltip-location="left"]:before,
+[data-tooltip-location="left"]:after {
+  left: auto;
+  right: calc(100% + var(--arrow-size));
+  bottom: 50%;
+}
+
+/* Tooltip */
+[data-tooltip-location="left"]:before {
+  transform: translate(calc(0px - var(--arrow-size)), 50%) scale(0.5);
+}
+[data-tooltip-location="left"]:hover:before {
+  transform: translate(calc(0px - var(--arrow-size)), 50%) scale(1);
+}
+
+/* Arrow */
+[data-tooltip-location="left"]:after {
+  border-width: var(--arrow-size) 0px var(--arrow-size) var(--arrow-size);
+  border-color: transparent transparent transparent rgba(55, 64, 70, 0.9);
+  transform-origin: left;
+  transform: translateY(50%) scaleX(0);
+}
+[data-tooltip-location="left"]:hover:after {
+  transform: translateY(50%) scaleX(1);
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #0B1B31;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #1b2b46;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

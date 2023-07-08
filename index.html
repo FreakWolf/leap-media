@@ -3,11 +3,24 @@
 <head>
    <meta charset='UTF-8'>
    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <link rel="icon" type="image/x-icon" href="./static/favicon.ico">
    <link rel="stylesheet" type="text/css" href="./style.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <title>Leap Media</title>
 </head>
 <body>
+
+  <div class="floating-telegram-icon" data-tooltip="Contact Us" data-tooltip-location="left">
+    <a href="https://t.me/Leapmedia" target="_blank" style="height: 100%; width: 100%;">
+      <img style="height: 100%; width: 100%;" src="./static/telegram_icon.svg" alt="telegram_icon">
+    </a>
+  </div>
+
+  <div class="floating-meet-btn">
+    <a href="#contact" style="height: 100%; width: 100%;">
+      <button> Schedule time with us! </button>
+    </a>
+  </div>
   
   <!-- all blobs (gradients) with position absolute  -->
   <img src ="./static/Ellipse 2.svg" alt="ellipse2" id="blob-1">
@@ -15,13 +28,16 @@
   <div class="blob3"></div>
   <!-- <img src ="./static/Ellipse 1.svg" alt="floor" id="floor-grad"> -->
 
-
+  <!-- <div style="opacity:0.01" class="cursor-wrap">
+    <img src="https://assets.website-files.com/5d28f5b286b66bc74fb8ea7b/5d9e4e17cf60055aa2030a73_joseph.svg" alt="Joseph Berry Scroll" width="120" data-w-id="0a35a4ef-d1a6-95ca-d09f-ac6ace6981d2" class="scroll" />
+    <div class="cursor-inner-1"></div>
+  </div> -->
 
   <!-- landing section  -->
   <section class="landing-sec">
     <!-- navbar  -->
     <nav>
-      <a href="#about"><button> About </button></a>
+      <a href="#partners"><button> Partners </button></a>
       <a href="#services"><button> Services </button></a>
       <a href="#contact"><button> Contact </button></a>
     </nav>
@@ -34,8 +50,16 @@
     
     <!-- social media button container  -->
     <div class="social-med-btn-container">
-      <button></button>
-      <button></button>
+      <button>
+        <a href="mailto:info@leapmedia.xyz">
+          <img src="./static/mail_icon.svg" alt="mail_icon">
+        </a>
+      </button>
+      <button>
+        <a href="https://t.me/Leapmedia" target="_blank">
+          <img src="./static/telegram_icon.svg" alt="telegram_icon">
+        </a>
+      </button>
     </div>
 
     <!-- bottom images  -->
@@ -48,7 +72,7 @@
 
 
   <!-- about us section  -->
-  <section class="about-sec" id="about"> 
+  <!-- <section class="about-sec" id="about"> 
     <div class="text-container">
       <h1> <span> ABOUT  </span> US</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>      
@@ -58,11 +82,12 @@
       <img src="./static/eth.svg" alt="eth" id="eth">
       <img src="./static/eth-rihgt.svg" alt="eth-rihgt" id="eth-right" data-depth="-0.7">
     </div>
-  </section>
+  </section> -->
 
 
   <!-- partners tape  -->
-  <div class="partner-tapes">
+  <div class="partner-tapes" id="partners">
+    <h1><span>Trusted by 50+ top industry leaders.</span></h1>
     <div class="partner-tape" id="tape1">
       <div class="card"> <img src="./static/partnerlogo.svg"> </div>
       <div class="card"> <img src="./static/partnerlogo.svg"> </div>
@@ -86,39 +111,56 @@
   <section class="services-sec" id="services">
     <div class="services-text-container">
       <div class="service-text-container">
-        <img src="./static/video_ads_img.svg" alt="video_ads_img" class="mobile_view_services_img">
-        <h1> <span> VIDEO </span> ADS </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>      
+        <img src="./static/product_demo_img.svg" alt="product_demo_img" class="mobile_view_services_img">
+        <h1> <span> Product Demo </span> Video </h1>
+        <p>Create compelling promo videos that leave a lasting impression, captivating audiences, and driving conversions for your business by connecting, intriguing, and motivating them to take action.</p>
       </div>
       <div class="service-text-container">
-        <img src="./static/event_video_production_img.svg" alt="event_video_production_img" class="mobile_view_services_img">
-        <h1> <span> VIDEO </span> ADS </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>      
+        <img src="./static/host_img.svg" alt="social_media_videos_img" class="mobile_view_services_img">
+        <h1> <span> Social Media </span> Videos </h1>
+        <p>Engage and captivate your audience with dynamic social media video content offering an interactive and immersive experience that enhances brand exposure and user engagement.</p>
+      </div>
+      <div class="service-text-container">
+        <img src="./static/explainer_videos_img.svg" alt="explainer_videos_img" class="mobile_view_services_img">
+        <h1> <span> Explainer </span> Videos </h1>
+        <p>Explainer videos show your customers how your product or service works and why it adds value. It answers the essentials - who, what, where, why and how?</p>
       </div>
       <div class="service-text-container">
         <img src="./static/host_img.svg" alt="host_img" class="mobile_view_services_img">
-        <h1> <span> VIDEO </span> ADS </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>      
+        <h1> <span> Host </span> </h1>
+        <p>Vir shines as an accomplished actor, captivating host, and charismatic voice-over talent. With a magnetic presence Vir brings boundless energy and unforgettable experiences, both on stage and screen, leaving a lasting impact on audiences.</p>
+      </div>
+      <div class="service-text-container">
+        <img src="./static/event_video_production_img.svg" alt="event_video_production_img" class="mobile_view_services_img">
+        <h1> <span> Event Video </span> Production </h1>
+        <p>Whether it's Award Ceremony Videos, Conference Videos, Publicity Event Videos, Launch Party Videos, or Vox Pops Videos, we have it all covered for you.</p>
+      </div>
+      <div class="service-text-container">
+        <img src="./static/social_media_management_img.svg" alt="social_media_management_img" class="mobile_view_services_img">
+        <h1> <span> Social Media </span> Management </h1>
+        <p>We are aiming to communicate & amplify your brands voice and mission on social media to reach as many people as possible.</p>
       </div>
     </div>
     <div class="services-img-container">
-      <img src="./static/frame_top_img.svg" alt="frame_top_img" id="frame_top_img">
+      <!-- <img src="./static/frame_top_img.svg" alt="frame_top_img" id="frame_top_img">
       <div class="rectangular-frame">
         <img src="./static/video_ads_img.svg" alt="video_ads_img" id="frame_inside_img">
       </div>
       <img src="./static/frame_bottom_front_img.svg" alt="frame_bottom_front_img" id="frame_bottom_front_img">
-      <img src="./static/frame_bottom_back_img.svg" alt="frame_bottom_back_img" id="frame_bottom_back_img">
+      <img src="./static/frame_bottom_back_img.svg" alt="frame_bottom_back_img" id="frame_bottom_back_img"> -->
+      <img src="./static/product_demo_img.svg" alt="product_demo_img" id="frame_inside_img">
     </div>
   </section>
 
   <section class="contact-sec" id="contact">
+    <h1 class="contact-heading"><span>Claim your 30-minute free strategy session now!</span></h1>
     <!-- Calendly inline widget begin -->
     <div class="calendly-inline-widget" data-url="https://calendly.com/vir--leapmedia/30min?hide_gdpr_banner=1" style="overflow-y: hidden; min-width: 280px; height: 800px;"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <!-- Calendly inline widget end -->
   </section>
 
-
+  <div id="preloader"></div>
 
 
   <script src="./script.js"></script>
