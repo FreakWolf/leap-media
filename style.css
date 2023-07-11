@@ -58,6 +58,12 @@ nav{
   justify-content: center;
 }
 
+#logo{
+  height: 100%;
+  position: absolute;
+  left: 5vw;
+}
+
 .landing-sec button{
   background-color: transparent;
   outline: none;
@@ -279,7 +285,7 @@ span{
   justify-content: center;
   align-items: center;
   column-gap: 2%;
-  padding: 2.5% 5%;
+  padding: 2.5% 6%;
   margin-top: 9vh;
   margin-bottom: 9vh;
 }
@@ -287,6 +293,7 @@ span{
 .partner-tape .card{
   background-color: #0B1B31;
   height: 100%;
+  width: 16vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -295,8 +302,8 @@ span{
 }
 
 .partner-tape .card img{
-  width: 50%;
-  height: auto;
+  width: 70%;
+  max-height: 100%;
 }
 
 #tape1{
@@ -656,6 +663,10 @@ span{
 }
 
 @media screen and (max-width: 600px) {
+  #logo{
+    display: none;
+  }
+
   .heading h1, .about-sec .text-container h1{
     font-size: 2.5rem;
   }
