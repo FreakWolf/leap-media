@@ -372,7 +372,7 @@ span{
 }
 
 .service-text-container span{ 
-  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
+  background: -webkit-linear-gradient(0deg, #B63FF0, #11E0E0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -391,6 +391,30 @@ span{
 #frame_inside_img {
   width: 100%;
   max-height: 90%;
+}
+
+.video_container_heading{
+  font-size: 3.5rem;
+  margin: 5vh auto 2vh;
+  max-width: 80vw;
+  text-align: center;
+  line-height: 1;
+  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.video_container iframe{
+  width: 40vw;
+  height:22.5vw;
+  margin: 5vh 5vw;
+  border-radius: 20px;
 }
 
 /* #frame_top_img {
@@ -446,7 +470,7 @@ span{
 .content_market_place_sec h1{
   font-size: 3.5rem;
   line-height: 1;
-  margin-top: 3vh;
+  margin-top: 5vh;
   margin-bottom: 1vh;
   max-width: 60vw;
   text-align: center;
@@ -655,6 +679,21 @@ span{
     font-size: 3rem;
   }
 
+  .video_container_heading{
+    max-width: 90vw;
+    font-size: 3rem;
+  }
+
+  .video_container{
+    grid-template-columns: 1fr;
+  }
+  
+  .video_container iframe{
+    width: 80vw;
+    height: 45vw;
+    margin: 5vh 10vw;
+  }
+
   .content_market_place_sec p{
     max-width: 90vw;
     font-size: 1rem;
@@ -681,6 +720,10 @@ span{
   }
 
   .partner-tapes h1, .contact-heading{
+    font-size: 2rem;
+  }
+
+  .video_container_heading{
     font-size: 2rem;
   }
 
