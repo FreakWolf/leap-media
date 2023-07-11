@@ -65,7 +65,7 @@ window.addEventListener('scroll', function() {
     frameInsideImg.alt = "product_demo_img";
   }
   else if(scrollTop > sectionOffset + windowHeight/2 && scrollTop <= sectionOffset + (3/2)*windowHeight){
-    frameInsideImg.src = "./static/host_img.svg";
+    frameInsideImg.src = "./static/social_media_videos_img.svg";
     frameInsideImg.alt = "social_media_videos_img";
   }
   else if(scrollTop > sectionOffset + (3/2)*windowHeight && scrollTop <= sectionOffset + (5/2)*windowHeight){
