@@ -43,10 +43,10 @@ body{
   z-index: -1;
 }
 
-#floor-grad{
+/* #floor-grad{
   width: 100vw;
-  position: absolute;;
-}
+  position: absolute;
+} */
 
 nav{
   position: relative;
@@ -86,6 +86,39 @@ nav{
   flex-direction: column;
 }
 
+.heading p span.typed-text {
+  font-weight: normal;
+  color: #dd7732;
+}
+
+#break_before_typeword{
+  display: none;
+}
+
+.heading p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  height: 2rem;
+  width: 2px;
+  animation: blink 1s infinite;
+  background: none;
+}
+
+.heading p span.cursor.typing {
+  animation: none;
+  background: none;
+  background-color: #ccc;
+}
+
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
 a, button{
   cursor: pointer;
 }
@@ -106,7 +139,7 @@ h1{
   font-size: 1.5rem;
   line-height: 3rem;
   margin-top: 20px;
-  max-width: 50%;
+  max-width: 100%;
 }
 
 span{
@@ -138,15 +171,15 @@ span{
 #land-left{
   position: absolute;
   bottom: 2vh;
-  width: 50vw;
-  left: 0;
+  max-width: 50vw;
+  left: 5vw;
   max-height: 45vh;
 }
 
 #land-right{
   position: absolute;
   bottom: 2vh;
-  width: 35vw;
+  max-width: 35vw;
   right: 0;
   max-height: 70vh;
 }
@@ -307,11 +340,11 @@ span{
 }
 
 #tape1{
-  margin-left: 75vw;
+  left: 75vw;
 }
 
 #tape2{
-  margin-left: -75vw;
+  right: 75vw;
 }
 
 #globe-img{
@@ -389,7 +422,7 @@ span{
 }
 
 #frame_inside_img {
-  width: 100%;
+  max-width: 100%;
   max-height: 90%;
 }
 
@@ -569,6 +602,10 @@ span{
     font-size: 1.25rem;
     line-height: 2rem;
   }
+
+  .heading p span.cursor {
+    height: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 1080px) {
@@ -666,8 +703,30 @@ span{
     top: 40%;
   }
 
+  #floor{
+    bottom: 2vh;
+  }
+
   .partner-tapes h1, .contact-heading{
     font-size: 2.5rem;
+  }
+
+  .partner-tape{
+    width: 150vw;
+    column-gap: 3%;
+    padding: 5% 4%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  
+  .partner-tape .card{
+    width: 24vw;
+    padding: 0 5px;
+  }
+  
+  .partner-tape .card img{
+    width: 70%;
+    max-height: 100%;
   }
 
   #content_market_place_img{
@@ -698,6 +757,10 @@ span{
     max-width: 90vw;
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+  
+  .social-med-btn-container button{
+    background: none;
   }
 }
 
@@ -730,11 +793,19 @@ span{
   .content_market_place_sec h1{
     font-size: 2rem;
   }
+
+  #break_before_typeword{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 300px) {
   .service-text-container h1{
     font-size: 2.5rem;
+  }
+
+  .social-med-btn-container{
+    display: none;
   }
 }
 
@@ -858,38 +929,6 @@ span{
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #0B1B31;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #1b2b46;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  background: #141c3a;
+  display: flex;
 }
