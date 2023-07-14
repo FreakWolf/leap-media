@@ -24,6 +24,50 @@ body{
   color: white;
 }
 
+/*--------------------------------------------------------------
+# Preloader styles starts here
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #141c3a;
+  display: flex;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+}
+
+.image-container img {
+  margin: auto;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 12%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+/*--------------------------------------------------------------
+# Preloader styles ends here
+--------------------------------------------------------------*/
+
 .landing-sec{
   height: 100vh !important;
   width: 100vw;
@@ -815,6 +859,10 @@ span::selection{
 }
 
 @media screen and (max-width: 600px) {
+  .text {
+    font-size: 1rem;
+  }
+
   #logo{
     display: none;
   }
@@ -970,19 +1018,4 @@ span::selection{
 }
 [data-tooltip-location="left"]:hover:after {
   transform: translateY(50%) scaleX(1);
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #141c3a;
-  display: flex;
 }
