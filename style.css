@@ -52,6 +52,7 @@ body{
 }
 
 .text-overlay {
+  display: none;
   position: absolute;
   bottom: 12%;
   left: 0;

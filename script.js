@@ -15,7 +15,11 @@ const tape2 = document.querySelector("#tape2");
 
 // Preloader
 let preloader = document.querySelector('#preloader');
+let preloaderGif = document.querySelector('#preloader_gif');
 if (preloader) {
+  preloaderGif.addEventListener('load', () => {
+    document.querySelector('#preloader_text').style.display = 'block';
+  });
   window.addEventListener('load', () => {
     preloader.remove()
   });
