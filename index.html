@@ -6,6 +6,7 @@
    <link rel="icon" type="image/x-icon" href="./static/favicon.ico">
    <link rel="stylesheet" type="text/css" href="./style.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    <title>Leap Media</title>
 </head>
 <body>
@@ -24,8 +25,8 @@
   
   <!-- all blobs (gradients) with position absolute  -->
   <img src ="./static/Ellipse 2.svg" alt="ellipse2" id="blob-1">
-  <div class="blob2"></div>
-  <div class="blob3"></div>
+  <!-- <div class="blob2"></div> -->
+  <!-- <div class="blob3"></div> -->
   <!-- <img src ="./static/Ellipse 1.svg" alt="floor" id="floor-grad"> -->
 
   <!-- <div style="opacity:0.01" class="cursor-wrap">
@@ -46,7 +47,8 @@
     <!-- landing text  -->
     <div class="heading">
       <h1> <span> LEAP  </span> MEDIA</h1>
-      <p>We help you acquire <br id="break_before_typeword"><span class="typed-text"></span><span class="cursor">|</span> <br> through our compelling videos.</p>
+      <!-- <p>We help web3 companies acquire <br id="break_before_typeword"><span class="typed-text"></span><span class="cursor">|</span> <br> through our compelling videos.</p> -->
+      <p>We help web3 companies acquire <br><span id="span_1">users, </span><span id="span_2">eyeballs, </span><span id="span_3">revenue </span><span id="span_4">& brand building</span><br> through our compelling videos.</p>
     </div>
     
     <!-- social media button container  -->
@@ -88,20 +90,20 @@
 
   <!-- partners tape  -->
   <div class="partner-tapes" id="partners">
-    <h1><span>Trusted by 50+ top industry leaders.</span></h1>
+    <h1 data-aos="fade-up"><span>Trusted by 50+ top industry leaders.</span></h1>
     <div class="partner-tape" id="tape1">
       <div class="card"> <img src="./static/Aptos_logo.svg"> </div>
       <div class="card"> <img src="./static/PancakeSwap_logo.svg" style="width: 90%;"> </div>
       <div class="card"> <img src="./static/Biconomy_logo.svg"> </div>
-      <div class="card"> <img src="./static/Polkadot_logo.svg"> </div>
+      <div class="card"> <img src="./static/Polkadot_logo.svg" style="width: 90%;"> </div>
       <div class="card"> <img src="./static/Bybit_logo.svg"> </div>
     </div>
     <div class="partner-tape" id="tape2">
       <div class="card"> <img src="./static/okx_logo.svg"> </div>
       <div class="card"> <img src="./static/Huobi_logo.svg"> </div>
       <div class="card"> <img src="./static/Bitget_logo.svg"> </div>
-      <div class="card"> <img src="./static/BitMart_logo.svg"> </div>
-      <div class="card"> <img src="./static/Mexc_logo.svg"> </div>
+      <div class="card"> <img src="./static/BitMart_logo.svg" style="width: 90%;"> </div>
+      <div class="card"> <img src="./static/Mexc_logo.svg" style="width: 100%;"> </div>
     </div>
   </div>
   
@@ -115,33 +117,33 @@
     <div class="services-text-container">
       <div class="service-text-container">
         <img src="./static/product_demo_img.png" alt="product_demo_img" class="mobile_view_services_img">
-        <h1> <span> Product Demo </span> Video </h1>
-        <p>Create compelling promo videos that leave a lasting impression, captivating audiences, and driving conversions for your business by connecting, intriguing, and motivating them to take action.</p>
+        <h1> <span> Product Demo </span> Video <span class="showRight-animate"></span></h1>
+        <p data-aos="fade-zoom-in">Create compelling promo videos that leave a lasting impression, captivating audiences, and driving conversions for your business by connecting, intriguing, and motivating them to take action.</p>
       </div>
       <div class="service-text-container">
         <img src="./static/social_media_videos_img.png" alt="social_media_videos_img" class="mobile_view_services_img">
-        <h1> <span> Social Media </span> Videos </h1>
-        <p>Engage and captivate your audience with dynamic social media video content offering an interactive and immersive experience that enhances brand exposure and user engagement.</p>
+        <h1> <span> Social Media </span> Videos <span class="showRight-animate"></span></h1>
+        <p data-aos="fade-zoom-in">Engage and captivate your audience with dynamic social media video content offering an interactive and immersive experience that enhances brand exposure and user engagement.</p>
       </div>
       <div class="service-text-container">
         <img src="./static/explainer_videos_img.png" alt="explainer_videos_img" class="mobile_view_services_img">
-        <h1> <span> Explainer </span> Videos </h1>
-        <p>Explainer videos show your customers how your product or service works and why it adds value. It answers the essentials - who, what, where, why and how?</p>
+        <h1> <span> Explainer </span> Videos <span class="showRight-animate"></span></h1>
+        <p data-aos="fade-zoom-in">Explainer videos show your customers how your product or service works and why it adds value. It answers the essentials - who, what, where, why and how?</p>
       </div>
       <div class="service-text-container">
         <img src="./static/host_img.png" alt="host_img" class="mobile_view_services_img">
-        <h1> <span> Host </span> </h1>
-        <p>Vir shines as an accomplished actor, captivating host, and charismatic voice-over talent. With a magnetic presence Vir brings boundless energy and unforgettable experiences, both on stage and screen, leaving a lasting impact on audiences.</p>
+        <h1> <span> Host </span> <span class="showRight-animate"></span></h1>
+        <p data-aos="fade-zoom-in">Vir shines as an accomplished actor, captivating host, and charismatic voice-over talent. With a magnetic presence Vir brings boundless energy and unforgettable experiences, both on stage and screen, leaving a lasting impact on audiences.</p>
       </div>
       <div class="service-text-container">
         <img src="./static/event_video_production_img.png" alt="event_video_production_img" class="mobile_view_services_img">
-        <h1> <span> Event Video </span> Production </h1>
-        <p>Whether it's Award Ceremony Videos, Conference Videos, Publicity Event Videos, Launch Party Videos, or Vox Pops Videos, we have it all covered for you.</p>
+        <h1> <span> Event Video </span> Production <span class="showRight-animate"></span></h1>
+        <p data-aos="fade-zoom-in">Whether it's Award Ceremony Videos, Conference Videos, Publicity Event Videos, Launch Party Videos, or Vox Pops Videos, we have it all covered for you.</p>
       </div>
       <div class="service-text-container">
         <img src="./static/social_media_management_img.png" alt="social_media_management_img" class="mobile_view_services_img">
-        <h1> <span> Social Media </span> Management </h1>
-        <p>We are aiming to communicate & amplify your brands voice and mission on social media to reach as many people as possible.</p>
+        <h1> <span> Social Media </span> Management <span class="showRight-animate"></span></h1>
+        <p data-aos="fade-zoom-in">We are aiming to communicate & amplify your brands voice and mission on social media to reach as many people as possible.</p>
       </div>
     </div>
     <div class="services-img-container" data-tilt data-tilt-full-page-listening>
@@ -156,23 +158,23 @@
   </section>
 
   <section>
-    <h1 class="video_container_heading">Some of our work...</h1>
+    <h1 class="video_container_heading">Some of our work... <span class="showRight-animate"></span></h1>
     <div class="video_container">
-      <iframe src="https://www.youtube.com/embed/8PwX65BLBvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/cpikYyQ4bn4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe src="https://player.vimeo.com/video/785447476?h=6ea975ba4e" title="vimeo-player" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/luSrhKcgix4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe data-aos="fade-right" src="https://www.youtube.com/embed/8PwX65BLBvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe data-aos="fade-left" src="https://www.youtube.com/embed/cpikYyQ4bn4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe data-aos="fade-right" src="https://player.vimeo.com/video/785447476?h=6ea975ba4e" title="vimeo-player" frameborder="0" allowfullscreen></iframe>
+      <iframe data-aos="fade-left" src="https://www.youtube.com/embed/luSrhKcgix4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     </section>
 
   <section class="content_market_place_sec">
-    <h1><span>A match made in Content marketing heaven.</span></h1>
-    <p>We're basically Hinge* but for web3 businesses and content creators.</p>
-    <img src="./static/content_market_place_img.png" alt="content_market_place_img" id="content_market_place_img">
+    <h1><span>A match made in Content marketing heaven.</span> <span class="showRight-animate"></span></h1>
+    <p data-aos="fade-up">We're basically Hinge* but for web3 businesses and content creators.</p>
+    <img data-aos="fade-zoom-in" src="./static/content_market_place_img.png" alt="content_market_place_img" id="content_market_place_img">
   </section>
 
   <section class="contact-sec" id="contact">
-    <h1 class="contact-heading"><span>Claim your 30-minute free strategy session now!</span></h1>
+    <h1 class="contact-heading"><span>Claim your 30-minute free strategy session now!</span> <span class="showRight-animate"></span></h1>
     <!-- Calendly inline widget begin -->
     <div class="calendly-inline-widget" data-url="https://calendly.com/vir--leapmedia/30min?hide_gdpr_banner=1" style="overflow-y: hidden; min-width: 280px; height: 800px;"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -185,14 +187,12 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://unpkg.com/split-type"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./script.js"></script>
-  <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" ></script> -->
-  
-  <!-- parallax script  -->
-  <!-- <script>
-    var scene = document.querySelector("#eth-img-cont")
-    console.log(scene)
-    var parallax = new Parallax(scene)
-  </script> -->
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

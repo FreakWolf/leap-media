@@ -149,6 +149,33 @@ span{
   -webkit-text-fill-color: transparent;
 }
 
+span::selection{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#span_1{
+  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#span_2{
+  background: -webkit-linear-gradient(0deg, #01F437, #01F437);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#span_3{
+  background: -webkit-linear-gradient(0deg, #11E0E0, #11E0E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#span_4{
+  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #floor{
   width: 100vw;
   /* justify-self: flex-end; */
@@ -233,7 +260,7 @@ span{
 }
 
 .about-sec span{ 
-  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437); 
+  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -292,6 +319,7 @@ span{
 }
 
 .partner-tapes h1, .contact-heading{
+  position: relative;
   font-size: 3.5rem;
   margin: 20vh auto 2vh;
   max-width: 80vw;
@@ -335,7 +363,7 @@ span{
 }
 
 .partner-tape .card img{
-  width: 70%;
+  width: 80%;
   max-height: 100%;
 }
 
@@ -392,10 +420,25 @@ span{
 }
 
 .service-text-container h1{
+  position: relative;
   max-width: 100%;
   font-size: 4rem;
   line-height: 1;
   margin-bottom: 2vh;
+}
+
+.showRight-animate{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #0B1B31 !important;
+  transition: 1s;
+}
+
+.show-animate{
+  width: 0;
 }
 
 .service-text-container p{
@@ -409,6 +452,11 @@ span{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* .char{
+  transform: translateY(115px) !important;
+  transition: transform 0.5s;
+} */
 
 .services-img-container {
   display: flex;
@@ -427,6 +475,7 @@ span{
 }
 
 .video_container_heading{
+  position: relative;
   font-size: 3.5rem;
   margin: 5vh auto 2vh;
   max-width: 80vw;
@@ -441,6 +490,7 @@ span{
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .video_container iframe{
@@ -501,6 +551,7 @@ span{
 }
 
 .content_market_place_sec h1{
+  position: relative;
   font-size: 3.5rem;
   line-height: 1;
   margin-top: 5vh;
@@ -668,6 +719,10 @@ span{
     text-align: center;
   }
 
+  /* .line{
+    text-align: center !important;
+  } */
+
   .mobile_view_services_img{
     display: block;
     height: 30vh;
@@ -723,11 +778,6 @@ span{
     width: 24vw;
     padding: 0 5px;
   }
-  
-  .partner-tape .card img{
-    width: 70%;
-    max-height: 100%;
-  }
 
   #content_market_place_img{
     width: 90vw;
@@ -771,6 +821,10 @@ span{
 
   .heading h1, .about-sec .text-container h1{
     font-size: 2.5rem;
+  }
+
+  .heading p{
+    max-width: 90%;
   }
 
   .service-text-container h1{

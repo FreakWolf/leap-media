@@ -4,6 +4,14 @@ const ethLeft = document.querySelector("#eth-left");
 const ethRight = document.querySelector("#eth-right");
 const tape1 = document.querySelector("#tape1");
 const tape2 = document.querySelector("#tape2");
+// const productDemoHeading = new SplitType('#product_demo_heading')
+
+// gsap.to('.char', {
+//   y: 0,
+//   stagger: 0.05,
+//   delay: 0.2,
+//   duration: 0.1
+// })
 
 // Preloader
 let preloader = document.querySelector('#preloader');
@@ -17,7 +25,7 @@ window.addEventListener("scroll", (e)=>{
   // landingLeftImg.style.left = -1 *window.scrollY*25/window.innerHeight +'vw';
   // landingRightImg.style.right = -1 *window.scrollY*17/window.innerHeight +'vw';
   if(window.innerWidth < 750){
-  tape1.style.left = -1*(window.scrollY - window.innerHeight)*125/window.innerHeight + "vw";
+  tape1.style.left = -1*(window.scrollY - window.innerHeight)*175/window.innerHeight + "vw";
   tape2.style.right = -1*(window.scrollY - 1.25*window.innerHeight)*125/window.innerHeight + "vw";
   }
   else{
@@ -92,44 +100,69 @@ window.addEventListener('scroll', function() {
   }
 });
 
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
+// const typedTextSpan = document.querySelector(".typed-text");
+// const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["users", "eyeballs", "revenue", "brand building"];
-const typingDelay = 200;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
+// const textArray = ["users", "eyeballs", "revenue", "brand building"];
+// const typingDelay = 200;
+// const erasingDelay = 100;
+// const newTextDelay = 2000; // Delay between current and next text
+// let textArrayIndex = 0;
+// let charIndex = 0;
 
-function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } 
-  else {
-    cursorSpan.classList.remove("typing");
-  	setTimeout(erase, newTextDelay);
+// function type() {
+//   if (charIndex < textArray[textArrayIndex].length) {
+//     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+//     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+//     charIndex++;
+//     setTimeout(type, typingDelay);
+//   } 
+//   else {
+//     cursorSpan.classList.remove("typing");
+//   	setTimeout(erase, newTextDelay);
+//   }
+// }
+
+// function erase() {
+// 	if (charIndex > 0) {
+//     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+//     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+//     charIndex--;
+//     setTimeout(erase, erasingDelay);
+//   } 
+//   else {
+//     cursorSpan.classList.remove("typing");
+//     textArrayIndex++;
+//     if(textArrayIndex>=textArray.length) textArrayIndex=0;
+//     setTimeout(type, typingDelay + 1100);
+//   }
+// }
+
+// document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+//   if(textArray.length) setTimeout(type, newTextDelay + 250);
+// });
+
+const getOffsetTop = element => {
+  let offsetTop = 0;
+  while(element) {
+    offsetTop += element.offsetTop;
+    element = element.offsetParent;
   }
+  return offsetTop;
 }
 
-function erase() {
-	if (charIndex > 0) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } 
-  else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if(textArrayIndex>=textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 1100);
-  }
-}
+let textRevealDivs = document.querySelectorAll('.showRight-animate');
 
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
-});
+window.onscroll = () => {
+  textRevealDivs.forEach(textRevealDiv => {
+    let top = window.scrollY;
+    let offset = getOffsetTop(textRevealDiv);
+
+    if (top + (8/10)*window.innerHeight > offset) {
+      textRevealDiv.classList.add('show-animate');
+    }
+    else{
+      textRevealDiv.classList.remove('show-animate');
+    }
+  })
+}
