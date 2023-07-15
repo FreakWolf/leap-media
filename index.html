@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-   <meta charset='UTF-8'>
-   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-   <link rel="icon" type="image/x-icon" href="./static/favicon.ico">
-   <link rel="stylesheet" type="text/css" href="./style.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-   <title>Leap Media</title>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel="icon" type="image/x-icon" href="./static/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Leap Media</title>
 </head>
 <body>
 
@@ -183,7 +183,7 @@
 
   <div id="preloader">
     <div class="image-container">
-      <img src="./static/rocket.gif" alt="preloader" id="preloader_gif">
+      <img src="./static/rocket.gif" alt="preloader" id="preloader_gif" onload="document.getElementById('preloader_text').style.display = 'block'">
       <div class="text-overlay" id="preloader_text">
         <p class="text">To the moon...</p>
       </div>

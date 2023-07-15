@@ -1,7 +1,5 @@
-const landingLeftImg = document.querySelector("#land-left");
-const landingRightImg = document.querySelector("#land-right");
-const ethLeft = document.querySelector("#eth-left");
-const ethRight = document.querySelector("#eth-right");
+// const landingLeftImg = document.querySelector("#land-left");
+// const landingRightImg = document.querySelector("#land-right");
 const tape1 = document.querySelector("#tape1");
 const tape2 = document.querySelector("#tape2");
 // const productDemoHeading = new SplitType('#product_demo_heading')
@@ -15,11 +13,7 @@ const tape2 = document.querySelector("#tape2");
 
 // Preloader
 let preloader = document.querySelector('#preloader');
-let preloaderGif = document.querySelector('#preloader_gif');
 if (preloader) {
-  preloaderGif.addEventListener('load', () => {
-    document.querySelector('#preloader_text').style.display = 'block';
-  });
   window.addEventListener('load', () => {
     preloader.remove()
   });
