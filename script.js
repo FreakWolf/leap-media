@@ -23,7 +23,7 @@ window.addEventListener("scroll", (e)=>{
   // landingLeftImg.style.left = -1 *window.scrollY*25/window.innerHeight +'vw';
   // landingRightImg.style.right = -1 *window.scrollY*17/window.innerHeight +'vw';
   if(window.innerWidth < 750){
-  tape1.style.left = -1*(window.scrollY - window.innerHeight)*175/window.innerHeight + "vw";
+  tape1.style.left = -1*(window.scrollY - 0.8*window.innerHeight)*175/window.innerHeight + "vw";
   tape2.style.right = -1*(window.scrollY - 1.25*window.innerHeight)*125/window.innerHeight + "vw";
   }
   else{
