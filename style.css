@@ -656,6 +656,22 @@ span::selection{
   font-weight: 700;
 }
 
+#contact-heading-div{
+  display: flex;
+  margin-top: 10vh;
+}
+
+#calendly_img{
+  width: 30vw;
+  margin-left: 12.5vw;
+}
+
+.contact-heading {
+  width: 40vw;
+  margin: auto 12.5vw auto 5vw;
+  text-align: left;
+}
+
 /* Cursor */
 /* .cursor-wrap {
   pointer-events: none;
@@ -856,6 +872,16 @@ span::selection{
   
   .social-med-btn-container button{
     background: none;
+  }
+
+  #calendly_img{
+    display: none;
+  }
+
+  .contact-heading {
+    width: auto;
+    margin: 2vh auto;
+    text-align: center;
   }
 }
 
