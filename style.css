@@ -195,7 +195,7 @@ h1{
 
 span{
   font-size: inherit;
-  background: -webkit-linear-gradient(0deg, #B63FF0, #11E0E0);
+  background: -webkit-linear-gradient(0deg, #FDC830, #F86620);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -205,25 +205,25 @@ span::selection{
 }
 
 #span_1{
-  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
+  background: -webkit-linear-gradient(0deg, #F86620, #FDC830);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #span_2{
-  background: -webkit-linear-gradient(0deg, #01F437, #01F437);
+  background: -webkit-linear-gradient(0deg, #FDC830, #FDC830);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #span_3{
-  background: -webkit-linear-gradient(0deg, #11E0E0, #11E0E0);
+  background: -webkit-linear-gradient(0deg, #FDC830, #FDC830);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #span_4{
-  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
+  background: -webkit-linear-gradient(0deg, #FDC830, #F86620);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -378,11 +378,11 @@ span::selection{
   line-height: 1;
 }
 
-.partner-tapes span, .contact-heading span{
+/* .partner-tapes span, .contact-heading span{
   background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .partner-tape{
   position: relative;
@@ -498,11 +498,11 @@ span::selection{
   margin-top: 20px;
 }
 
-.service-text-container span{ 
+/* .service-text-container span{ 
   background: -webkit-linear-gradient(0deg, #B63FF0, #11E0E0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 /* .char{
   transform: translateY(115px) !important;
@@ -532,7 +532,7 @@ span::selection{
   max-width: 80vw;
   text-align: center;
   line-height: 1;
-  background: -webkit-linear-gradient(0deg, #11E0E0, #01F437);
+  background: -webkit-linear-gradient(0deg, #FDC830, #F86620);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -611,6 +611,12 @@ span::selection{
   text-align: center;
 }
 
+/* .content_market_place_sec h1 span{
+  background: -webkit-linear-gradient(0deg, #B63FF0, #11E0E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
 .content_market_place_sec p{
   color: #b4b4b4;
   font-size: 1.3rem;
@@ -654,7 +660,7 @@ span::selection{
 }
 
 .floating-meet-btn a button {
-  background: #24C7D4;
+  background: #F2B63C;
   padding: 12px 20px;
   border: none;
   border-radius: 30px;
