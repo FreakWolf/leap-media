@@ -163,9 +163,10 @@
     <div class="video_container">
       <iframe data-aos="fade-right" src="https://www.youtube.com/embed/8PwX65BLBvc?vq=hd1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <iframe data-aos="fade-left" src="https://www.youtube.com/embed/cpikYyQ4bn4?vq=hd1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <!-- <iframe data-aos="fade-right" src="https://player.vimeo.com/video/785447476?h=6ea975ba4e" title="vimeo-player" frameborder="0" allowfullscreen></iframe> -->
-      <iframe data-aos="fade-right" src="https://drive.google.com/file/d/1X8IojxZmvGGHUOEhP70N3ZeSogzah58J/preview?vq=hd1080" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-      <iframe data-aos="fade-left" src="https://www.youtube.com/embed/luSrhKcgix4?vq=hd1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe data-aos="fade-right" src="https://player.vimeo.com/video/785447476?h=6ea975ba4e&title=0&byline=0&portrait=0&quality=1080p" title="vimeo-player" frameborder="0" allowfullscreen></iframe>
+      <!-- <iframe data-aos="fade-right" src="https://drive.google.com/file/d/1X8IojxZmvGGHUOEhP70N3ZeSogzah58J/preview?vq=hd1080" allow="autoplay" frameborder="0" allowfullscreen></iframe> -->
+      <!-- <iframe data-aos="fade-left" src="https://www.youtube.com/embed/luSrhKcgix4?vq=hd1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+      <iframe data-aos="fade-left" src="https://www.youtube.com/embed/luSrhKcgix4?loop=1&controls=1&showinfo=0&rel=0&modestbranding=1&enablejsapi=1&wmode=transparent" frameborder="0" allowfullscreen></iframe>
     </div>
     </section>
 
@@ -187,9 +188,7 @@
   </section>
 
   <div id="preloader">
-    <object type="image/svg+xml" data="./static/preloader.svg" alt="preloader_obj" img width="100%">
-      <img src="./static/preloader.svg" alt="preloader_img"/>
-    </object>
+    <object type="image/svg+xml" data="./static/planets_preloader.svg" alt="preloader_obj" img width="100%"></object>
   </div>
 
 
@@ -201,6 +200,34 @@
   <script src="./cursor.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    function loadYouTubePlayerAPI(callback) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      window.onYouTubeIframeAPIReady = callback;
+    }
+
+    function createYouTubePlayer() {
+      const player = new YT.Player('youtube-player', {
+        height: '315',
+        width: '560',
+        playerVars: {
+          autoplay: 0,
+          loop: 1,
+          controls: 1,
+          showinfo: 0,
+          modestbranding: 1,
+          playsinline: 1,
+          origin: window.location.origin,
+          enablejsapi: 1,
+          wmode: 'transparent',
+          vq: 'hd1080',
+        },
+      });
+    }
   </script>
 </body>
 </html>
