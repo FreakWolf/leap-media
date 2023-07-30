@@ -57,45 +57,45 @@ window.addEventListener('scroll', function() {
     document.querySelector('.floating-meet-btn').style.display = 'block';
   }
 
-  if (scrollTop >= sectionOffset && scrollTop <= sectionOffset + sectionHeight - windowHeight) {
-    servicesImgContainer.style.position = 'fixed';
-    servicesImgContainer.style.top = '0';
-  }
-  else if (scrollTop >= sectionOffset + sectionHeight - windowHeight) {
-    servicesImgContainer.style.position = 'absolute';
-    servicesImgContainer.style.top = 'auto';
-    servicesImgContainer.style.bottom = '0';
-  }
-  else {
-    servicesImgContainer.style.position = 'absolute';
-    servicesImgContainer.style.top = '0';
-    servicesImgContainer.style.bottom = 'auto';
-  }
+  // if (scrollTop >= sectionOffset && scrollTop <= sectionOffset + sectionHeight - windowHeight) {
+  //   servicesImgContainer.style.position = 'fixed';
+  //   servicesImgContainer.style.top = '0';
+  // }
+  // else if (scrollTop >= sectionOffset + sectionHeight - windowHeight) {
+  //   servicesImgContainer.style.position = 'absolute';
+  //   servicesImgContainer.style.top = 'auto';
+  //   servicesImgContainer.style.bottom = '0';
+  // }
+  // else {
+  //   servicesImgContainer.style.position = 'absolute';
+  //   servicesImgContainer.style.top = '0';
+  //   servicesImgContainer.style.bottom = 'auto';
+  // }
 
-  if(scrollTop <= sectionOffset + windowHeight/2){
-    frameInsideImg.src = "./static/product_demo_img.png";
-    frameInsideImg.alt = "product_demo_img";
-  }
-  else if(scrollTop > sectionOffset + windowHeight/2 && scrollTop <= sectionOffset + (3/2)*windowHeight){
-    frameInsideImg.src = "./static/social_media_videos_img.png";
-    frameInsideImg.alt = "social_media_videos_img";
-  }
-  else if(scrollTop > sectionOffset + (3/2)*windowHeight && scrollTop <= sectionOffset + (5/2)*windowHeight){
-    frameInsideImg.src = "./static/explainer_videos_img.png";
-    frameInsideImg.alt = "explainer_videos_img";
-  }
-  else if(scrollTop > sectionOffset + (5/2)*windowHeight && scrollTop <= sectionOffset + (7/2)*windowHeight){
-    frameInsideImg.src = "./static/host_img.png";
-    frameInsideImg.alt = "host_img";
-  }
-  else if(scrollTop > sectionOffset + (7/2)*windowHeight && scrollTop <= sectionOffset + (9/2)*windowHeight){
-    frameInsideImg.src = "./static/event_video_production_img.png";
-    frameInsideImg.alt = "event_video_production_img";
-  }
-  else{
-    frameInsideImg.src = "./static/social_media_management_img.png";
-    frameInsideImg.alt = "social_media_management_img";
-  }
+  // if(scrollTop <= sectionOffset + windowHeight/2){
+  //   frameInsideImg.src = "./static/product_demo_img.png";
+  //   frameInsideImg.alt = "product_demo_img";
+  // }
+  // else if(scrollTop > sectionOffset + windowHeight/2 && scrollTop <= sectionOffset + (3/2)*windowHeight){
+  //   frameInsideImg.src = "./static/social_media_videos_img.png";
+  //   frameInsideImg.alt = "social_media_videos_img";
+  // }
+  // else if(scrollTop > sectionOffset + (3/2)*windowHeight && scrollTop <= sectionOffset + (5/2)*windowHeight){
+  //   frameInsideImg.src = "./static/explainer_videos_img.png";
+  //   frameInsideImg.alt = "explainer_videos_img";
+  // }
+  // else if(scrollTop > sectionOffset + (5/2)*windowHeight && scrollTop <= sectionOffset + (7/2)*windowHeight){
+  //   frameInsideImg.src = "./static/host_img.png";
+  //   frameInsideImg.alt = "host_img";
+  // }
+  // else if(scrollTop > sectionOffset + (7/2)*windowHeight && scrollTop <= sectionOffset + (9/2)*windowHeight){
+  //   frameInsideImg.src = "./static/event_video_production_img.png";
+  //   frameInsideImg.alt = "event_video_production_img";
+  // }
+  // else{
+  //   frameInsideImg.src = "./static/social_media_management_img.png";
+  //   frameInsideImg.alt = "social_media_management_img";
+  // }
 });
 
 // const typedTextSpan = document.querySelector(".typed-text");
