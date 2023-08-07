@@ -528,8 +528,10 @@ span::selection{
   position:absolute;
   /* background-image:linear-gradient(to right,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); */
   content:'';
-  height:100%;width:25%;
-  z-index:2;pointer-events:none;
+  height:100%;
+  width:25%;
+  z-index:2;
+  pointer-events:none;
 }
 .slider::before{
   left:0;
@@ -547,7 +549,7 @@ span::selection{
   width: auto;
   height: 100%;
   display: flex;
-  animation: scroll1 10s linear infinite;
+  animation: scroll1 30s linear infinite;
   justify-content: space-between;
 }
 
@@ -555,7 +557,7 @@ span::selection{
   width: auto;
   height: 100%;
   display: flex;
-  animation: scroll2 10s linear infinite;
+  animation: scroll2 30s linear infinite;
   justify-content: space-between;
 }
 
