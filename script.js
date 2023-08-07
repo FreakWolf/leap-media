@@ -9,19 +9,19 @@ if (preloader) {
   });
 }
 
-window.addEventListener("scroll", (e)=>{
-  var windowTop = $(window).scrollTop();
-  var tape1Top = $("#tape1").offset().top;
-  var tape2Top = $("#tape2").offset().top;
-  if(window.innerWidth < 750){
-    var left1Position = windowTop - tape1Top + window.innerHeight/2;
-  }else{
-    var left1Position = windowTop - tape1Top + window.innerHeight/3;
-  }
-  var left2Position = windowTop - tape2Top + window.innerHeight/3;
-  $("#tape1").css({ left: -left1Position });
-  $("#tape2").css({ left: left2Position });
-})
+// window.addEventListener("scroll", (e)=>{
+//   var windowTop = $(window).scrollTop();
+//   var tape1Top = $("#tape1").offset().top;
+//   var tape2Top = $("#tape2").offset().top;
+//   if(window.innerWidth < 750){
+//     var left1Position = windowTop - tape1Top + window.innerHeight/2;
+//   }else{
+//     var left1Position = windowTop - tape1Top + window.innerHeight/3;
+//   }
+//   var left2Position = windowTop - tape2Top + window.innerHeight/3;
+//   $("#tape1").css({ left: -left1Position });
+//   $("#tape2").css({ left: left2Position });
+// })
 
 var servicesSection = document.querySelector('.services-sec');
 var contactSection = document.querySelector('.contact-sec');
