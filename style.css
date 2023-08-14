@@ -318,14 +318,11 @@ span::selection{
   overflow-x: hidden;
 }
 
-.services-sec{
-  height: 600vh;
-  width: 100vw;
+.services-sec {
   display: flex;
-  position: relative;
-  /* align-items: center; */
-  overflow: hidden;
-  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .service-container{
