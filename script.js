@@ -5,7 +5,9 @@ const tape2 = document.querySelector("#tape2");
 let preloader = document.querySelector('#preloader');
 if (preloader) {
   window.addEventListener('load', () => {
-    preloader.remove()
+    setTimeout(() => {
+      preloader.remove();
+    }, 2500);
   });
 }
 
@@ -30,20 +32,20 @@ var frameInsideImg = document.querySelector('#frame_inside_img');
 var sectionHeight = servicesSection.offsetHeight;
 var windowHeight = window.innerHeight;
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   var sectionOffset = servicesSection.offsetTop;
   var contactSecOffset = contactSection.offsetTop;
 
-  if(scrollTop <= (2/10)*windowHeight){
+  if (scrollTop <= (2 / 10) * windowHeight) {
     document.querySelector('.floating-telegram-icon').style.display = 'none';
     document.querySelector('.floating-meet-btn').style.display = 'none';
   }
-  else if(scrollTop >= contactSecOffset - windowHeight){
+  else if (scrollTop >= contactSecOffset - windowHeight) {
     document.querySelector('.floating-telegram-icon').style.display = 'block';
     document.querySelector('.floating-meet-btn').style.display = 'none';
   }
-  else{
+  else {
     document.querySelector('.floating-telegram-icon').style.display = 'block';
     document.querySelector('.floating-meet-btn').style.display = 'block';
   }
@@ -51,7 +53,7 @@ window.addEventListener('scroll', function() {
 
 const getOffsetTop = element => {
   let offsetTop = 0;
-  while(element) {
+  while (element) {
     offsetTop += element.offsetTop;
     element = element.offsetParent;
   }
@@ -65,10 +67,10 @@ window.onscroll = () => {
     let top = window.scrollY;
     let offset = getOffsetTop(textRevealDiv);
 
-    if (top + (8/10)*window.innerHeight > offset) {
+    if (top + (8 / 10) * window.innerHeight > offset) {
       textRevealDiv.classList.add('show-animate');
     }
-    else{
+    else {
       textRevealDiv.classList.remove('show-animate');
     }
   })
