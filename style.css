@@ -221,6 +221,7 @@ span::selection{
   left: 0;
   top: 30%;
   row-gap: 4vh;
+  z-index: 10;
 }
 
 .social-med-btn-container button{
