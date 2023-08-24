@@ -3,11 +3,17 @@ const tape2 = document.querySelector("#tape2");
 
 // Preloader
 let preloader = document.querySelector('#preloader');
-if (preloader) {
-  window.addEventListener('load', () => {
+window.addEventListener('load', () => {
+  if (preloader) {
     preloader.remove()
-  });
-}
+  }
+});
+
+setTimeout(function() {
+  if (preloader) {
+    preloader.remove()
+  }
+}, 5000);
 
 // window.addEventListener("scroll", (e)=>{
 //   var windowTop = $(window).scrollTop();
