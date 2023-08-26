@@ -11,7 +11,7 @@ setTimeout(function() {
   if (preloader) {
     preloader.remove()
   }
-}, 5000);
+}, 6000);
 
 var servicesSection = document.querySelector('.services-sec');
 var contactSection = document.querySelector('.contact-sec');
