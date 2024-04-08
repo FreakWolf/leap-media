@@ -1007,3 +1007,42 @@ span::selection {
 [data-tooltip-location="left"]:hover:after {
   transform: translateY(50%) scaleX(1);
 }
+
+#countdown {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  margin-top: 2.5rem;
+}
+
+#maintenance-message {
+  position: fixed;
+  top: calc(50% - 50px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.2em;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  #countdown {
+    font-size: 1.5em;
+  }
+
+  #maintenance-message {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #countdown {
+    font-size: 1.2em;
+  }
+
+  #maintenance-message {
+    font-size: 1.5em;
+  }
+}
