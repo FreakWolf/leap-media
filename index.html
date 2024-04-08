@@ -9,68 +9,89 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>Leap Media</title>
+  <style>
+    #countdown {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+    }
+
+    #maintenance-message {
+      position: fixed;
+      top: calc(50% - 50px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.2em;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-  <!--   <canvas></canvas> -->
+  <div id="maintenance-message">We are currently undergoing maintenance and will be back in:</div>
+  <div id="countdown"></div>
+  <div id="website" style="display: none;">
+    <!--   <canvas></canvas> -->
 
-  <div class="floating-telegram-icon" data-tooltip="Contact Us" data-tooltip-location="left">
-    <a href="https://t.me/Leapmedia" target="_blank" style="height: 100%; width: 100%;">
-      <img style="height: 100%; width: 100%;" src="./static/telegram_icon.svg" alt="telegram_icon">
-    </a>
-  </div>
-
-  <div class="floating-meet-btn">
-    <a href="#contact" style="height: 100%; width: 100%;">
-      <button> Schedule time with us! </button>
-    </a>
-  </div>
-
-  <!-- all blobs (gradients) with position absolute  -->
-  <img src="./static/Ellipse 2.svg" alt="ellipse2" id="blob-1">
-
-  <!-- landing section  -->
-  <section class="landing-sec">
-    <!-- navbar  -->
-    <nav>
-      <img src="./static/logo.svg" alt="logo" id="logo">
-      <a href="#partners"><button> Partners </button></a>
-      <a href="#services"><button> Services </button></a>
-      <a href="#contact"><button> Contact </button></a>
-    </nav>
-
-    <!-- landing text  -->
-    <div class="heading">
-      <h1><span> LEAP </span> MEDIA</h1>
-      <p>We help companies acquire <br><span id="span_1">users, </span><span id="span_2">eyeballs, </span><span
-          id="span_3">revenue </span><span id="span_4">& brand building</span><br> through our compelling videos.</p>
+    <div class="floating-telegram-icon" data-tooltip="Contact Us" data-tooltip-location="left">
+      <a href="https://t.me/Leapmedia" target="_blank" style="height: 100%; width: 100%;">
+        <img style="height: 100%; width: 100%;" src="./static/telegram_icon.svg" alt="telegram_icon">
+      </a>
     </div>
 
-    <!-- social media button container  -->
-    <div class="social-med-btn-container">
-      <button>
-        <a href="mailto:vir@leapmedia.xyz">
-          <img src="./static/mail_icon.svg" alt="mail_icon">
-        </a>
-      </button>
-      <button>
-        <a href="https://t.me/Leapmedia" target="_blank">
-          <img src="./static/telegram_icon.svg" alt="telegram_icon">
-        </a>
-      </button>
+    <div class="floating-meet-btn">
+      <a href="#contact" style="height: 100%; width: 100%;">
+        <button> Schedule time with us! </button>
+      </a>
     </div>
 
-    <!-- bottom images  -->
-    <img src="./static/Mask group.svg" alt="floor" id="floor">
-    <img src="./static/Group 14.png" alt="left-img" id="land-left">
-    <img src="./static/Group 13.png" alt="left-img" id="land-right">
-    <div class="floor-grad"></div>
-  </section>
+    <!-- all blobs (gradients) with position absolute  -->
+    <img src="./static/Ellipse 2.svg" alt="ellipse2" id="blob-1">
 
-  <!-- partners tape  -->
-  <div class="partner-tapes" id="partners">
-    <h1><span>Trusted by 50+ top industry leaders.</span></h1>
-    <!-- <div class="partner-tape" id="tape1">
+    <!-- landing section  -->
+    <section class="landing-sec">
+      <!-- navbar  -->
+      <nav>
+        <img src="./static/logo.svg" alt="logo" id="logo">
+        <a href="#partners"><button> Partners </button></a>
+        <a href="#services"><button> Services </button></a>
+        <a href="#contact"><button> Contact </button></a>
+      </nav>
+
+      <!-- landing text  -->
+      <div class="heading">
+        <h1><span> LEAP </span> MEDIA</h1>
+        <p>We help companies acquire <br><span id="span_1">users, </span><span id="span_2">eyeballs, </span><span
+            id="span_3">revenue </span><span id="span_4">& brand building</span><br> through our compelling videos.</p>
+      </div>
+
+      <!-- social media button container  -->
+      <div class="social-med-btn-container">
+        <button>
+          <a href="mailto:vir@leapmedia.xyz">
+            <img src="./static/mail_icon.svg" alt="mail_icon">
+          </a>
+        </button>
+        <button>
+          <a href="https://t.me/Leapmedia" target="_blank">
+            <img src="./static/telegram_icon.svg" alt="telegram_icon">
+          </a>
+        </button>
+      </div>
+
+      <!-- bottom images  -->
+      <img src="./static/Mask group.svg" alt="floor" id="floor">
+      <img src="./static/Group 14.png" alt="left-img" id="land-left">
+      <img src="./static/Group 13.png" alt="left-img" id="land-right">
+      <div class="floor-grad"></div>
+    </section>
+
+    <!-- partners tape  -->
+    <div class="partner-tapes" id="partners">
+      <h1><span>Trusted by 50+ top industry leaders.</span></h1>
+      <!-- <div class="partner-tape" id="tape1">
       <div class="card"> <img src="./static/Aptos_logo.svg"> </div>
       <div class="card"> <img src="./static/PancakeSwap_logo.svg" style="width: 90%;"> </div>
       <div class="card"> <img src="./static/Biconomy_logo.svg"> </div>
@@ -85,133 +106,135 @@
       <div class="card"> <img src="./static/Mexc_logo.svg" style="width: 100%;"> </div>
     </div> -->
 
-    <div class="slider">
-      <div class="slide-track-1">
-        <div class="slide"><img src="./static/Aptos_logo.svg"></div>
-        <div class="slide"><img src="./static/PancakeSwap_logo.svg"></div>
-        <div class="slide"><img src="./static/Biconomy_logo.svg"></div>
-        <div class="slide"><img src="./static/Polkadot_logo.svg"></div>
-        <div class="slide"><img src="./static/Bybit_logo.svg"></div>
-        <!-- same 5 slides doubled (duplicate) -->
-        <div class="slide"><img src="./static/Aptos_logo.svg"></div>
-        <div class="slide"><img src="./static/PancakeSwap_logo.svg"></div>
-        <div class="slide"><img src="./static/Biconomy_logo.svg"></div>
-        <div class="slide"><img src="./static/Polkadot_logo.svg"></div>
-        <div class="slide"><img src="./static/Bybit_logo.svg"></div>
+      <div class="slider">
+        <div class="slide-track-1">
+          <div class="slide"><img src="./static/Aptos_logo.svg"></div>
+          <div class="slide"><img src="./static/PancakeSwap_logo.svg"></div>
+          <div class="slide"><img src="./static/Biconomy_logo.svg"></div>
+          <div class="slide"><img src="./static/Polkadot_logo.svg"></div>
+          <div class="slide"><img src="./static/Bybit_logo.svg"></div>
+          <!-- same 5 slides doubled (duplicate) -->
+          <div class="slide"><img src="./static/Aptos_logo.svg"></div>
+          <div class="slide"><img src="./static/PancakeSwap_logo.svg"></div>
+          <div class="slide"><img src="./static/Biconomy_logo.svg"></div>
+          <div class="slide"><img src="./static/Polkadot_logo.svg"></div>
+          <div class="slide"><img src="./static/Bybit_logo.svg"></div>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slide-track-2">
+          <div class="slide"><img src="./static/okx_logo.svg"></div>
+          <div class="slide"><img src="./static/Huobi_logo.svg"></div>
+          <div class="slide"><img src="./static/Bitget_logo.svg"></div>
+          <div class="slide"><img src="./static/BitMart_logo.svg"></div>
+          <div class="slide"><img src="./static/Mexc_logo.svg"></div>
+          <!-- same 5 slides doubled (duplicate) -->
+          <div class="slide"><img src="./static/okx_logo.svg"></div>
+          <div class="slide"><img src="./static/Huobi_logo.svg"></div>
+          <div class="slide"><img src="./static/Bitget_logo.svg"></div>
+          <div class="slide"><img src="./static/BitMart_logo.svg"></div>
+          <div class="slide"><img src="./static/Mexc_logo.svg"></div>
+        </div>
       </div>
     </div>
-    <div class="slider">
-      <div class="slide-track-2">
-        <div class="slide"><img src="./static/okx_logo.svg"></div>
-        <div class="slide"><img src="./static/Huobi_logo.svg"></div>
-        <div class="slide"><img src="./static/Bitget_logo.svg"></div>
-        <div class="slide"><img src="./static/BitMart_logo.svg"></div>
-        <div class="slide"><img src="./static/Mexc_logo.svg"></div>
-        <!-- same 5 slides doubled (duplicate) -->
-        <div class="slide"><img src="./static/okx_logo.svg"></div>
-        <div class="slide"><img src="./static/Huobi_logo.svg"></div>
-        <div class="slide"><img src="./static/Bitget_logo.svg"></div>
-        <div class="slide"><img src="./static/BitMart_logo.svg"></div>
-        <div class="slide"><img src="./static/Mexc_logo.svg"></div>
-      </div>
-    </div>
-  </div>
 
-  <section id="video_container">
-    <h1 class="video_container_heading" data-aos="fade-up">Some of our work...</h1>
-    <div class="video_container">
-      <video data-aos="fade-right" src="static/video1.mp4" controls preload="none" title="Video player" frameBorder="0"
-        allowFullScreen poster="static/video1_img.jpg"></video>
-      <video data-aos="fade-left" src="static/video2.mp4" controls preload="none" title="Video player" frameBorder="0"
-        allowFullScreen poster="static/video2_img.png"></video>
-      <video data-aos="fade-right" src="static/video3.mp4" controls preload="none" title="Video player" frameBorder="0"
-        allowFullScreen poster="static/video3_img.png"></video>
-      <video data-aos="fade-left" src="static/video4.mp4" controls preload="none" title="Video player" frameBorder="0"
-        allowFullScreen poster="static/video4_img.jpg"></video>
-      <video data-aos="fade-right" src="static/video5.mp4" controls preload="none" title="Video player" frameBorder="0"
-        allowFullScreen poster="static/video5_img.png"></video>
-      <video data-aos="fade-left" src="static/video6.mp4" controls preload="none" title="Video player" frameBorder="0"
-        allowFullScreen poster="static/video6_img.png"></video>
-    </div>
-  </section>
+    <section id="video_container">
+      <h1 class="video_container_heading" data-aos="fade-up">Some of our work...</h1>
+      <div class="video_container">
+        <video data-aos="fade-right" src="static/video1.mp4" controls preload="none" title="Video player"
+          frameBorder="0" allowFullScreen poster="static/video1_img.jpg"></video>
+        <video data-aos="fade-left" src="static/video2.mp4" controls preload="none" title="Video player" frameBorder="0"
+          allowFullScreen poster="static/video2_img.png"></video>
+        <video data-aos="fade-right" src="static/video3.mp4" controls preload="none" title="Video player"
+          frameBorder="0" allowFullScreen poster="static/video3_img.png"></video>
+        <video data-aos="fade-left" src="static/video4.mp4" controls preload="none" title="Video player" frameBorder="0"
+          allowFullScreen poster="static/video4_img.jpg"></video>
+        <video data-aos="fade-right" src="static/video5.mp4" controls preload="none" title="Video player"
+          frameBorder="0" allowFullScreen poster="static/video5_img.png"></video>
+        <video data-aos="fade-left" src="static/video6.mp4" controls preload="none" title="Video player" frameBorder="0"
+          allowFullScreen poster="static/video6_img.png"></video>
+      </div>
+    </section>
 
-  <section class="services-sec" id="services">
-    <div class="services-text-container">
-      <div class="service-container s-right">
-        <div class="services-img-container si-right" data-tilt data-tilt-full-page-listening>
-          <!-- <img data-aos="fade-zoom-in" src="./static/product_demo_img.png" alt="product_demo_img" class="services_img"> -->
+    <section class="services-sec" id="services">
+      <div class="services-text-container">
+        <div class="service-container s-right">
+          <div class="services-img-container si-right" data-tilt data-tilt-full-page-listening>
+            <!-- <img data-aos="fade-zoom-in" src="./static/product_demo_img.png" alt="product_demo_img" class="services_img"> -->
+          </div>
+          <div class="service-text-container st-left" data-aos="fade-right">
+            <h1> <span> Product Demo </span> Video</h1>
+            <p>Create compelling promo videos that leave a lasting impression, captivating audiences, and driving
+              conversions for your business by connecting, intriguing, and motivating them to take action.</p>
+          </div>
         </div>
-        <div class="service-text-container st-left" data-aos="fade-right">
-          <h1> <span> Product Demo </span> Video</h1>
-          <p>Create compelling promo videos that leave a lasting impression, captivating audiences, and driving
-            conversions for your business by connecting, intriguing, and motivating them to take action.</p>
+        <div class="service-container" data-aos="fade-left">
+          <div class="services-img-container si-left" data-tilt data-tilt-full-page-listening>
+            <!-- <img data-aos="fade-zoom-in" src="./static/social_media_videos_img.png" alt="social_media_videos_img" class="services_img"> -->
+          </div>
+          <div class="service-text-container st-right">
+            <h1> <span> Social Media </span> Videos</h1>
+            <p>Engage and captivate your audience with dynamic social media video content offering an interactive and
+              immersive experience that enhances brand exposure and user engagement.</p>
+          </div>
+        </div>
+        <div class="service-container s-right">
+          <div class="services-img-container si-right" data-tilt data-tilt-full-page-listening>
+            <!-- <img data-aos="fade-zoom-in" src="./static/explainer_videos_img.png" alt="explainer_videos_img" class="services_img"> -->
+          </div>
+          <div class="service-text-container st-left" data-aos="fade-right">
+            <h1> <span> Explainer </span> Videos</h1>
+            <p>Explainer videos show your customers how your product or service works and why it adds value. It answers
+              the essentials - who, what, where, why and how?</p>
+          </div>
+        </div>
+        <div class="service-container">
+          <div class="services-img-container si-left" data-tilt data-tilt-full-page-listening>
+            <!-- <img data-aos="fade-zoom-in" src="./static/host_img.png" alt="host_img" class="services_img"> -->
+          </div>
+          <div class="service-text-container st-right" data-aos="fade-left">
+            <h1> <span> Hosting & Event </span> Video Production </h1>
+            <p>Transform your Eth and Global Web3 events with our exceptional event video production, including after
+              movies, highlight videos and engaging social media content. Combined with our magnetic hosting that
+              infuses
+              boundless energy, we curate moments that resonate and inspire action.</p>
+          </div>
+        </div>
+        <div class="service-container s-right">
+          <div class="services-img-container si-right" data-tilt data-tilt-full-page-listening>
+            <!-- <img data-aos="fade-zoom-in" src="./static/social_media_management_img.png" alt="social_media_management_img" class="services_img"> -->
+          </div>
+          <div class="service-text-container st-left" data-aos="fade-right">
+            <h1> <span> Social Media </span> Management</h1>
+            <p>We are aiming to communicate & amplify your brands voice and mission on social media to reach as many
+              people as possible.</p>
+          </div>
+        </div>
+        <div class="service-container">
+          <div class="services-img-container si-left" data-tilt data-tilt-full-page-listening>
+            <!-- <img data-aos="fade-zoom-in" src="./static/Spaceman2-removebg-preview.png" alt="event_video_production_img" class="services_img"> -->
+          </div>
+          <div class="service-text-container st-right" data-aos="fade-left">
+            <h1> <span> Get Users </span> Onboarded</h1>
+            <p>We help you onboard organic users through our Network of Web3 Influencers and Key opinion Leaders who
+              have
+              a combined community of more than 1Mn+</p>
+          </div>
+        </div>
+        <div class="service-container s-right">
+          <div class="services-img-container si-right" data-tilt data-tilt-full-page-listening>
+            <!-- <img data-aos="fade-zoom-in" src="./static/Spaceman2-removebg-preview.png" alt="event_video_production_img" class="services_img"> -->
+          </div>
+          <div class="service-text-container st-left" data-aos="fade-right">
+            <h1> <span>Podcasts</span></h1>
+            <p>From ideation to distribution, we craft captivating podcasts that amplify your message, engage your
+              audience, and enhance your digital presence across platforms.</p>
+          </div>
         </div>
       </div>
-      <div class="service-container" data-aos="fade-left">
-        <div class="services-img-container si-left" data-tilt data-tilt-full-page-listening>
-          <!-- <img data-aos="fade-zoom-in" src="./static/social_media_videos_img.png" alt="social_media_videos_img" class="services_img"> -->
-        </div>
-        <div class="service-text-container st-right">
-          <h1> <span> Social Media </span> Videos</h1>
-          <p>Engage and captivate your audience with dynamic social media video content offering an interactive and
-            immersive experience that enhances brand exposure and user engagement.</p>
-        </div>
-      </div>
-      <div class="service-container s-right">
-        <div class="services-img-container si-right" data-tilt data-tilt-full-page-listening>
-          <!-- <img data-aos="fade-zoom-in" src="./static/explainer_videos_img.png" alt="explainer_videos_img" class="services_img"> -->
-        </div>
-        <div class="service-text-container st-left" data-aos="fade-right">
-          <h1> <span> Explainer </span> Videos</h1>
-          <p>Explainer videos show your customers how your product or service works and why it adds value. It answers
-            the essentials - who, what, where, why and how?</p>
-        </div>
-      </div>
-      <div class="service-container">
-        <div class="services-img-container si-left" data-tilt data-tilt-full-page-listening>
-          <!-- <img data-aos="fade-zoom-in" src="./static/host_img.png" alt="host_img" class="services_img"> -->
-        </div>
-        <div class="service-text-container st-right" data-aos="fade-left">
-          <h1> <span> Hosting & Event </span> Video Production </h1>
-          <p>Transform your Eth and Global Web3 events with our exceptional event video production, including after
-            movies, highlight videos and engaging social media content. Combined with our magnetic hosting that infuses
-            boundless energy, we curate moments that resonate and inspire action.</p>
-        </div>
-      </div>
-      <div class="service-container s-right">
-        <div class="services-img-container si-right" data-tilt data-tilt-full-page-listening>
-          <!-- <img data-aos="fade-zoom-in" src="./static/social_media_management_img.png" alt="social_media_management_img" class="services_img"> -->
-        </div>
-        <div class="service-text-container st-left" data-aos="fade-right">
-          <h1> <span> Social Media </span> Management</h1>
-          <p>We are aiming to communicate & amplify your brands voice and mission on social media to reach as many
-            people as possible.</p>
-        </div>
-      </div>
-      <div class="service-container">
-        <div class="services-img-container si-left" data-tilt data-tilt-full-page-listening>
-          <!-- <img data-aos="fade-zoom-in" src="./static/Spaceman2-removebg-preview.png" alt="event_video_production_img" class="services_img"> -->
-        </div>
-        <div class="service-text-container st-right" data-aos="fade-left">
-          <h1> <span> Get Users </span> Onboarded</h1>
-          <p>We help you onboard organic users through our Network of Web3 Influencers and Key opinion Leaders who have
-            a combined community of more than 1Mn+</p>
-        </div>
-      </div>
-      <div class="service-container s-right">
-        <div class="services-img-container si-right" data-tilt data-tilt-full-page-listening>
-          <!-- <img data-aos="fade-zoom-in" src="./static/Spaceman2-removebg-preview.png" alt="event_video_production_img" class="services_img"> -->
-        </div>
-        <div class="service-text-container st-left" data-aos="fade-right">
-          <h1> <span>Podcasts</span></h1>
-          <p>From ideation to distribution, we craft captivating podcasts that amplify your message, engage your
-            audience, and enhance your digital presence across platforms.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- <section class="content_market_place_sec">
+    <!-- <section class="content_market_place_sec">
     <h1 data-aos="fade-up"><span>A match made in Content marketing heaven.</span></h1>
     <p data-aos="fade-up">Elevate your brand's social media presence by leveraging our pool of web3 content creators.
     </p>
@@ -219,22 +242,59 @@
       id="content_market_place_img">
   </section> -->
 
-  <section class="contact-sec" id="contact">
-    <div id="contact-heading-div">
-      <!-- <img src="./static/calendly_img.png" alt="calendly_img" id="calendly_img" data-tilt data-tilt-full-page-listening> -->
-      <h1 class="contact-heading" data-aos="fade-up"><span>Claim your 30-minute free strategy session now!</span></h1>
-    </div>
-    <!-- Calendly inline widget begin -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/vir--leapmedia/30min?hide_gdpr_banner=1"
-      style="overflow-y: hidden; min-width: 280px; height: 800px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly inline widget end -->
-  </section>
+    <section class="contact-sec" id="contact">
+      <div id="contact-heading-div">
+        <!-- <img src="./static/calendly_img.png" alt="calendly_img" id="calendly_img" data-tilt data-tilt-full-page-listening> -->
+        <h1 class="contact-heading" data-aos="fade-up"><span>Claim your 30-minute free strategy session now!</span></h1>
+      </div>
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/vir--leapmedia/30min?hide_gdpr_banner=1"
+        style="overflow-y: hidden; min-width: 280px; height: 800px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+    </section>
 
-  <div id="preloader">
-    <object type="image/svg+xml" data="./static/preloader.svg" alt="preloader_obj" img width="100%"></object>
+    <div id="preloader">
+      <object type="image/svg+xml" data="./static/preloader.svg" alt="preloader_obj" img width="100%"></object>
+    </div>
+
+    <!-- .... -->
   </div>
 
+  <script>
+    // Countdown timer
+    function countdown(endDate) {
+      const timerUpdate = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        if (distance < 0) {
+          clearInterval(timerUpdate);
+          document.getElementById('countdown').style.display = 'none';
+          document.getElementById('website').style.display = 'block';
+        } else {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById('countdown').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+        }
+      }, 1000);
+    }
+
+    // Set the end date for maintenance duration
+    const maintenanceEndDateTime = new Date();
+    maintenanceEndDateTime.setDate(maintenanceEndDateTime.getDate() + 1);
+    maintenanceEndDateTime.setHours(4);
+    maintenanceEndDateTime.setMinutes(0);
+    maintenanceEndDateTime.setSeconds(0);
+
+    const maintenanceEndDate = maintenanceEndDateTime.getTime();
+
+    // Start the countdown
+    countdown(maintenanceEndDate);
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"
     integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw=="
