@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <div id="maintenance-message">We are currently undergoing maintenance and will be back in:</div>
-  <div id="countdown"></div>
-  <div id="website" style="display: none;">
+  <!-- <div id="maintenance-message">We are currently undergoing maintenance and will be back in:</div> -->
+  <!-- <div id="countdown"></div> -->
+  <!-- <div id="website" style="display: none;"> -->
     <!--   <canvas></canvas> -->
 
     <div class="floating-telegram-icon" data-tooltip="Contact Us" data-tooltip-location="left">
@@ -241,41 +241,41 @@
     </div>
 
     <!-- .... -->
-  </div>
+  <!-- </div> -->
 
   <script>
     // Countdown timer
-    function countdown(endDate) {
-      const timerUpdate = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = endDate - now;
+    // function countdown(endDate) {
+    //   const timerUpdate = setInterval(() => {
+    //     const now = new Date().getTime();
+    //     const distance = endDate - now;
 
-        if (distance < 0) {
-          clearInterval(timerUpdate);
-          document.getElementById('countdown').style.display = 'none';
-          document.getElementById('website').style.display = 'block';
-        } else {
-          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //     if (distance < 0) {
+    //       clearInterval(timerUpdate);
+    //       document.getElementById('countdown').style.display = 'none';
+    //       document.getElementById('website').style.display = 'block';
+    //     } else {
+    //       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-          document.getElementById('countdown').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
-        }
-      }, 1000);
-    }
+    //       document.getElementById('countdown').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+    //     }
+    //   }, 1000);
+    // }
 
     // Set the end date for maintenance duration
-    const maintenanceEndDateTime = new Date();
-    maintenanceEndDateTime.setDate(maintenanceEndDateTime.getDate() + 1);
-    maintenanceEndDateTime.setHours(4);
-    maintenanceEndDateTime.setMinutes(0);
-    maintenanceEndDateTime.setSeconds(0);
+    // const maintenanceEndDateTime = new Date();
+    // maintenanceEndDateTime.setDate(maintenanceEndDateTime.getDate() + 1);
+    // maintenanceEndDateTime.setHours(4);
+    // maintenanceEndDateTime.setMinutes(0);
+    // maintenanceEndDateTime.setSeconds(0);
 
-    const maintenanceEndDate = maintenanceEndDateTime.getTime();
+    // const maintenanceEndDate = maintenanceEndDateTime.getTime();
 
     // Start the countdown
-    countdown(maintenanceEndDate);
+    // countdown(maintenanceEndDate);
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"
